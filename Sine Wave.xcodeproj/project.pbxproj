@@ -1,0 +1,291 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BE80D7F1C7CB3B800A964DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D7E1C7CB3B800A964DE /* AppDelegate.swift */; };
+		7BE80D811C7CB3B800A964DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D801C7CB3B800A964DE /* ViewController.swift */; };
+		7BE80D841C7CB3B800A964DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE80D821C7CB3B800A964DE /* Main.storyboard */; };
+		7BE80D861C7CB3B800A964DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE80D851C7CB3B800A964DE /* Assets.xcassets */; };
+		7BE80D891C7CB3B800A964DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE80D871C7CB3B800A964DE /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7BE80D7B1C7CB3B800A964DE /* Sine Wave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sine Wave.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE80D7E1C7CB3B800A964DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7BE80D801C7CB3B800A964DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7BE80D831C7CB3B800A964DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7BE80D851C7CB3B800A964DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BE80D881C7CB3B800A964DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BE80D8A1C7CB3B800A964DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BE80D781C7CB3B800A964DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BE80D721C7CB3B800A964DE = {
+			isa = PBXGroup;
+			children = (
+				7BE80D7D1C7CB3B800A964DE /* Sine Wave */,
+				7BE80D7C1C7CB3B800A964DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BE80D7C1C7CB3B800A964DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BE80D7B1C7CB3B800A964DE /* Sine Wave.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BE80D7D1C7CB3B800A964DE /* Sine Wave */ = {
+			isa = PBXGroup;
+			children = (
+				7BE80D7E1C7CB3B800A964DE /* AppDelegate.swift */,
+				7BE80D801C7CB3B800A964DE /* ViewController.swift */,
+				7BE80D821C7CB3B800A964DE /* Main.storyboard */,
+				7BE80D851C7CB3B800A964DE /* Assets.xcassets */,
+				7BE80D871C7CB3B800A964DE /* LaunchScreen.storyboard */,
+				7BE80D8A1C7CB3B800A964DE /* Info.plist */,
+			);
+			path = "Sine Wave";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BE80D7A1C7CB3B800A964DE /* Sine Wave */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BE80D8D1C7CB3B800A964DE /* Build configuration list for PBXNativeTarget "Sine Wave" */;
+			buildPhases = (
+				7BE80D771C7CB3B800A964DE /* Sources */,
+				7BE80D781C7CB3B800A964DE /* Frameworks */,
+				7BE80D791C7CB3B800A964DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sine Wave";
+			productName = "Sine Wave";
+			productReference = 7BE80D7B1C7CB3B800A964DE /* Sine Wave.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BE80D731C7CB3B800A964DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "mitchell hudson";
+				TargetAttributes = {
+					7BE80D7A1C7CB3B800A964DE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 7BE80D761C7CB3B800A964DE /* Build configuration list for PBXProject "Sine Wave" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BE80D721C7CB3B800A964DE;
+			productRefGroup = 7BE80D7C1C7CB3B800A964DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BE80D7A1C7CB3B800A964DE /* Sine Wave */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BE80D791C7CB3B800A964DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE80D891C7CB3B800A964DE /* LaunchScreen.storyboard in Resources */,
+				7BE80D861C7CB3B800A964DE /* Assets.xcassets in Resources */,
+				7BE80D841C7CB3B800A964DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BE80D771C7CB3B800A964DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE80D811C7CB3B800A964DE /* ViewController.swift in Sources */,
+				7BE80D7F1C7CB3B800A964DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7BE80D821C7CB3B800A964DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BE80D831C7CB3B800A964DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7BE80D871C7CB3B800A964DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7BE80D881C7CB3B800A964DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7BE80D8B1C7CB3B800A964DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BE80D8C1C7CB3B800A964DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BE80D8E1C7CB3B800A964DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sine Wave/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.webdevils.Sine-Wave";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7BE80D8F1C7CB3B800A964DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Sine Wave/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.webdevils.Sine-Wave";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BE80D761C7CB3B800A964DE /* Build configuration list for PBXProject "Sine Wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BE80D8B1C7CB3B800A964DE /* Debug */,
+				7BE80D8C1C7CB3B800A964DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BE80D8D1C7CB3B800A964DE /* Build configuration list for PBXNativeTarget "Sine Wave" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BE80D8E1C7CB3B800A964DE /* Debug */,
+				7BE80D8F1C7CB3B800A964DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BE80D731C7CB3B800A964DE /* Project object */;
+}
