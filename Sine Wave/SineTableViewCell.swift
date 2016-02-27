@@ -9,21 +9,20 @@
 import UIKit
 
 protocol SineTableViewCellDelegate {
-    func remove(sine: Sine?)
+    func removeSineAtIndexPath(indexPath: NSIndexPath)
 }
 
 class SineTableViewCell: UITableViewCell {
     
     var delegate: SineTableViewCellDelegate?
-    
     var stepFormatter = NSNumberFormatter()
     var rangeFormatter = NSNumberFormatter()
-    
     var sine: Sine? {
         didSet {
             updateLabels()
         }
     }
+    var indexPath: NSIndexPath?
     
     
     // MARK: IBOutlets 
@@ -53,9 +52,13 @@ class SineTableViewCell: UITableViewCell {
     }
     
     @IBAction func removeButtonTapped(sender: UIButton) {
-        if let delegate = delegate {
-            // delegate.remove()
+        guard let delegate = delegate, let sine = sine, let indexPath = indexPath else {
+            print("????")
+            return
         }
+        
+        print("removing sine")
+        delegate.removeSineAtIndexPath(indexPath)
     }
     
     

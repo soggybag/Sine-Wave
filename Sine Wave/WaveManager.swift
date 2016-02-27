@@ -16,8 +16,9 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
     
     // MARK: Sine TableView Cell Delegate
     
-    func remove(sine: Sine?) {
-        SineStore.sharedInstance
+    func removeSineAtIndexPath(indexPath: NSIndexPath) {
+        SineStore.sharedInstance.removeAtIndex(indexPath.row)
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
     }
     
     // MARK: TableView DataSource
@@ -35,6 +36,7 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
         cell.rangeSlider.value = Float(sine.radius)
         cell.stepSlider.value = Float(sine.frequency)
         cell.delegate = self
+        cell.indexPath = indexPath
         
         return cell
     }
