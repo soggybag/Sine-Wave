@@ -12,6 +12,13 @@
 		7BE80D841C7CB3B800A964DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE80D821C7CB3B800A964DE /* Main.storyboard */; };
 		7BE80D861C7CB3B800A964DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE80D851C7CB3B800A964DE /* Assets.xcassets */; };
 		7BE80D891C7CB3B800A964DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE80D871C7CB3B800A964DE /* LaunchScreen.storyboard */; };
+		7BE80D911C7CB3F600A964DE /* SineWave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D901C7CB3F600A964DE /* SineWave.swift */; };
+		7BE80D931C7ED8FE00A964DE /* Sine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D921C7ED8FD00A964DE /* Sine.swift */; };
+		7BE80D951C7F82B100A964DE /* WaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D941C7F82B100A964DE /* WaveManager.swift */; };
+		7BE80D971C7F84FF00A964DE /* SineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D961C7F84FF00A964DE /* SineTableViewCell.swift */; };
+		7BE80D991C7FAB0700A964DE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE80D981C7FAB0700A964DE /* Formatters.swift */; };
+		7BF087A21C7FAE9400E5B5E0 /* SineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF087A11C7FAE9400E5B5E0 /* SineStore.swift */; };
+		7BF087A41C7FB09900E5B5E0 /* SineWaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF087A31C7FB09900E5B5E0 /* SineWaveView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,14 @@
 		7BE80D851C7CB3B800A964DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BE80D881C7CB3B800A964DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BE80D8A1C7CB3B800A964DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BE80D901C7CB3F600A964DE /* SineWave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SineWave.swift; sourceTree = "<group>"; };
+		7BE80D921C7ED8FD00A964DE /* Sine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sine.swift; sourceTree = "<group>"; };
+		7BE80D941C7F82B100A964DE /* WaveManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveManager.swift; sourceTree = "<group>"; };
+		7BE80D961C7F84FF00A964DE /* SineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SineTableViewCell.swift; sourceTree = "<group>"; };
+		7BE80D981C7FAB0700A964DE /* Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		7BE80D9A1C7FACDB00A964DE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		7BF087A11C7FAE9400E5B5E0 /* SineStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SineStore.swift; sourceTree = "<group>"; };
+		7BF087A31C7FB09900E5B5E0 /* SineWaveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SineWaveView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +71,15 @@
 			children = (
 				7BE80D7E1C7CB3B800A964DE /* AppDelegate.swift */,
 				7BE80D801C7CB3B800A964DE /* ViewController.swift */,
+				7BE80D941C7F82B100A964DE /* WaveManager.swift */,
+				7BE80D961C7F84FF00A964DE /* SineTableViewCell.swift */,
+				7BF087A11C7FAE9400E5B5E0 /* SineStore.swift */,
+				7BE80D981C7FAB0700A964DE /* Formatters.swift */,
+				7BE80D9A1C7FACDB00A964DE /* MyPlayground.playground */,
 				7BE80D821C7CB3B800A964DE /* Main.storyboard */,
+				7BE80D901C7CB3F600A964DE /* SineWave.swift */,
+				7BF087A31C7FB09900E5B5E0 /* SineWaveView.swift */,
+				7BE80D921C7ED8FD00A964DE /* Sine.swift */,
 				7BE80D851C7CB3B800A964DE /* Assets.xcassets */,
 				7BE80D871C7CB3B800A964DE /* LaunchScreen.storyboard */,
 				7BE80D8A1C7CB3B800A964DE /* Info.plist */,
@@ -135,8 +158,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF087A41C7FB09900E5B5E0 /* SineWaveView.swift in Sources */,
+				7BE80D931C7ED8FE00A964DE /* Sine.swift in Sources */,
+				7BE80D911C7CB3F600A964DE /* SineWave.swift in Sources */,
+				7BE80D951C7F82B100A964DE /* WaveManager.swift in Sources */,
 				7BE80D811C7CB3B800A964DE /* ViewController.swift in Sources */,
+				7BE80D971C7F84FF00A964DE /* SineTableViewCell.swift in Sources */,
 				7BE80D7F1C7CB3B800A964DE /* AppDelegate.swift in Sources */,
+				7BF087A21C7FAE9400E5B5E0 /* SineStore.swift in Sources */,
+				7BE80D991C7FAB0700A964DE /* Formatters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +314,7 @@
 				7BE80D8F1C7CB3B800A964DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

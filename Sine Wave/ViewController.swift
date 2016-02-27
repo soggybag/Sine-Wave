@@ -8,11 +8,36 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate {
+    
+    var waveManager: WaveManager!
+    
+    // MARK: IBOutlets
 
+    @IBOutlet weak var sineWaveView: SineWaveView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+    
+    
+    // MARK: IBActions
+    
+    @IBAction func addSineButtonTapped(sender: UIButton) {
+        SineStore.sharedInstance.add()
+        waveManager.reloadData()
+    }
+    
+    
+    
+    // MARK: TableView Delegate 
+    
+    
+    
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        waveManager = WaveManager(tableView: tableView)
+        tableView.dataSource = waveManager
     }
 
     override func didReceiveMemoryWarning() {
