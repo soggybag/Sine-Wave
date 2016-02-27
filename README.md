@@ -7,3 +7,5 @@ single UIBezierPath, and then strokes the path.
 
 SineWaves are stored in a singlton: SineStore. A tableview with a custom cell displays an interface for each sine wave. 
 WaveManager acts Data Source for this tableview. 
+
+The controls for each sine wave consist of sliders for amplitude and frequency. There is also a slider for phase, which at the moment is not active...
