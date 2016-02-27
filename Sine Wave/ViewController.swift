@@ -20,11 +20,21 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     
     
+    
     // MARK: IBActions
     
     @IBAction func addSineButtonTapped(sender: UIButton) {
         SineStore.sharedInstance.add()
         waveManager.reloadData()
+    }
+    
+    
+    @IBAction func animateSwitchChanged(sender: UISwitch) {
+        if sender.on {
+            sineWaveView.run()
+        } else {
+            sineWaveView.pause()
+        }
     }
     
     

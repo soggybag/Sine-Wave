@@ -121,10 +121,17 @@
                                             <action selector="addSineButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OKf-4W-e67"/>
                                         </connections>
                                     </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5d-6E-w1V">
+                                        <rect key="frame" x="543" y="141" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="animateSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="d4T-wx-mub"/>
+                                        </connections>
+                                    </switch>
                                 </subviews>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="94X-fb-c0b"/>
+                                    <constraint firstAttribute="trailing" secondItem="t5d-6E-w1V" secondAttribute="trailing" constant="8" id="nvj-3E-MI6"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -143,13 +150,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sineWaveView" destination="eeI-Vi-TSw" id="cdY-JC-h37"/>
+                        <outlet property="sineWaveView" destination="eeI-Vi-TSw" id="NRy-lq-uCK"/>
                         <outlet property="tableView" destination="ple-FM-XbT" id="PRn-vb-n8k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="387"/>
+            <point key="canvasLocation" x="438" y="389"/>
         </scene>
     </scenes>
 </document>
