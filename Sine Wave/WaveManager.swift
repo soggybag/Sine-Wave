@@ -33,7 +33,7 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
         
         let sine = SineStore.sharedInstance.array[indexPath.row]
         cell.sine = sine
-        cell.rangeSlider.value = Float(sine.radius)
+        cell.rangeSlider.value = Float(sine.amplitude)
         cell.stepSlider.value = Float(sine.frequency)
         cell.delegate = self
         cell.indexPath = indexPath

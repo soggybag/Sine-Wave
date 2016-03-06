@@ -10,16 +10,18 @@ import Foundation
 import UIKit
 
 class Sine {
-    var radius: Double!
+    var amplitude: Double!
     var frequency: Double!
     var phase: Double = 0
+    var time: Double = 0
     
-    func step() {
-        phase += frequency
+    /** Advance the phase */
+    func step(inc: Double) {
+        time += inc
     }
     
-    init(frequency: Double, radius: Double) {
+    init(frequency: Double, amplitude: Double) {
         self.frequency = frequency
-        self.radius = radius
+        self.amplitude = amplitude
     }
 }

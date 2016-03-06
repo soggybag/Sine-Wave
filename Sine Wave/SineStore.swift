@@ -12,9 +12,9 @@ import UIKit
 class SineStore {
     static let sharedInstance = SineStore()
     private init() {
-        array.append(Sine(frequency: 0.1, radius: 20))
-        array.append(Sine(frequency: 0.08, radius: 30))
-        array.append(Sine(frequency: 0.13, radius: 24))
+        array.append(Sine(frequency: 1, amplitude: 20))
+        array.append(Sine(frequency: 2, amplitude: 30))
+        array.append(Sine(frequency: 3, amplitude: 24))
     }
     
     var array = [Sine]()
@@ -27,7 +27,7 @@ class SineStore {
     
     
     func add() {
-        array.append(Sine(frequency: 0.1, radius: 20))
+        array.append(Sine(frequency: 0.1, amplitude: 20))
     }
     
     func removeAtIndex(index: Int) {

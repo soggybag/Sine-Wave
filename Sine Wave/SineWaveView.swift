@@ -13,6 +13,7 @@ class SineWaveView: UIView {
     var pathLayer = CAShapeLayer()
     var centerY: Double = 0
     var stepX: Double = 0
+    var steps = 200
     var timer: NSTimer!
     var isRunning = true
     
@@ -21,7 +22,7 @@ class SineWaveView: UIView {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.04, target: self, selector: "onTimer:", userInfo: nil, repeats: true)
         
         centerY = Double(frame.height) / 2
-        stepX = Double(frame.width / 100.0)
+        stepX = Double(frame.width / CGFloat(steps))
     }
     
     
@@ -54,17 +55,25 @@ class SineWaveView: UIView {
     
     func drawSineWaves() {
         let path = UIBezierPath()
+        
+        
         for i in 0..<SineStore.sharedInstance.count {
             let sine = SineStore.sharedInstance.getAtIndex(i)
             if isRunning {
-                sine.step()
+                sine.step(0.1)
             }
-            path.moveToPoint(CGPoint(x: 0, y: centerY))
-            for p in 0..<100 {
+            
+            let f = M_PI * 2 / Double(steps) * sine.frequency
+            for p in 0..<steps {
                 let inc = Double(p)
                 let x = inc * stepX
-                let y = (sin((inc * sine.frequency) + sine.phase) * sine.radius) + centerY
-                path.addLineToPoint(CGPoint(x: x, y: y))
+                let y = sin((Double(p) * f)+sine.phase+sine.time) * sine.amplitude + centerY
+                if p == 0 {
+                    path.moveToPoint(CGPoint(x: x, y: y))
+                } else {
+                    path.addLineToPoint(CGPoint(x: x, y: y))
+                }
+                
             }
         }
         

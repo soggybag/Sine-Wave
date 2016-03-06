@@ -32,13 +32,15 @@ class SineTableViewCell: UITableViewCell {
     @IBOutlet weak var stepLabel: UILabel!
     @IBOutlet weak var rangeLabel: UILabel!
     @IBOutlet weak var removeButton: UIButton!
+    @IBOutlet weak var phaseSlider: UISlider!
+    @IBOutlet weak var phaseLabel: UILabel!
     
     
     // MARK: IBActions
     
     @IBAction func rangeSliderChanged(sender: UISlider) {
         if let sine = sine {
-            sine.radius = Double(sender.value)
+            sine.amplitude = Double(sender.value)
             updateLabels()
         }
     }
@@ -51,8 +53,18 @@ class SineTableViewCell: UITableViewCell {
         
     }
     
+    
+    @IBAction func phaseSliderChanged(sender: UISlider) {
+        if let sine = sine {
+            sine.phase = Double(sender.value)
+            updateLabels()
+        }
+    }
+    
+    
+    
     @IBAction func removeButtonTapped(sender: UIButton) {
-        guard let delegate = delegate, let sine = sine, let indexPath = indexPath else {
+        guard let delegate = delegate, let indexPath = indexPath else {
             print("????")
             return
         }
@@ -69,8 +81,9 @@ class SineTableViewCell: UITableViewCell {
             formatter.numberStyle = .DecimalStyle
             formatter.minimumFractionDigits = 2
             formatter.maximumFractionDigits = 2
-            rangeLabel.text = formatter.stringFromNumber(sine!.radius)
+            rangeLabel.text = formatter.stringFromNumber(sine!.amplitude)
             stepLabel.text = formatter.stringFromNumber(sine!.frequency)
+            phaseLabel.text = formatter.stringFromNumber(sine!.phase)
         }
     }
     
