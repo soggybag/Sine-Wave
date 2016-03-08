@@ -24,7 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     // MARK: IBActions
     
     @IBAction func addSineButtonTapped(sender: UIButton) {
-        SineStore.sharedInstance.add()
+        SineStore.sharedInstance.add(1, amplitude: 20, color: UIColor.blueColor())
         waveManager.reloadData()
     }
     

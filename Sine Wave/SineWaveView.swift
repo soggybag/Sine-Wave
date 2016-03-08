@@ -54,10 +54,8 @@ class SineWaveView: UIView {
     
     
     func drawSineWaves() {
-        let path = UIBezierPath()
-        
-        
         for i in 0..<SineStore.sharedInstance.count {
+            let path = UIBezierPath()
             let sine = SineStore.sharedInstance.getAtIndex(i)
             if isRunning {
                 sine.step(0.1)
@@ -73,13 +71,17 @@ class SineWaveView: UIView {
                 } else {
                     path.addLineToPoint(CGPoint(x: x, y: y))
                 }
-                
             }
+            
+            sine.shapeLayer.path = path.CGPath
+            layer.addSublayer(sine.shapeLayer)
+            
+            // pathLayer.path = path.CGPath
+            sine.shapeLayer.fillColor = UIColor.clearColor().CGColor
+            sine.shapeLayer.strokeColor = sine.color.CGColor // UIColor.redColor().CGColor
+
         }
         
-        pathLayer.path = path.CGPath
-        pathLayer.fillColor = UIColor.clearColor().CGColor
-        pathLayer.strokeColor = UIColor.redColor().CGColor
     }
     
     

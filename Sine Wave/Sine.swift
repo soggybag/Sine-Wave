@@ -14,14 +14,18 @@ class Sine {
     var frequency: Double!
     var phase: Double = 0
     var time: Double = 0
+    var color: UIColor!
+    
+    let shapeLayer = CAShapeLayer()
     
     /** Advance the phase */
     func step(inc: Double) {
         time += inc
     }
     
-    init(frequency: Double, amplitude: Double) {
+    init(frequency: Double, amplitude: Double, color: UIColor) {
         self.frequency = frequency
         self.amplitude = amplitude
+        self.color = color
     }
 }
