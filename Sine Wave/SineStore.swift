@@ -14,7 +14,7 @@ class SineStore {
     private init() {
         array.append(Sine(frequency: 1, amplitude: 20, color: UIColor.redColor()))
         array.append(Sine(frequency: 2, amplitude: 30, color: UIColor.orangeColor()))
-        array.append(Sine(frequency: 3, amplitude: 24, color: UIColor.yellowColor()))
+        array.append(Sine(frequency: 3, amplitude: 24, color: UIColor.greenColor()))
     }
     
     var array = [Sine]()

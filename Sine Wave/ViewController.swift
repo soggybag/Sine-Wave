@@ -6,6 +6,9 @@
 //  Copyright © 2016 mitchell hudson. All rights reserved.
 //
 
+
+// This project shows some sine waves
+
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate {

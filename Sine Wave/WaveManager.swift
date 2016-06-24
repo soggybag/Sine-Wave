@@ -27,7 +27,12 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
         return SineStore.sharedInstance.count
     }
     
+   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let label = UILabel()
+        label.adjustsFontSizeToFitWidth = false
+        label.lineBreakMode = .ByTruncatingTail
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! SineTableViewCell
         
@@ -40,6 +45,7 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
         
         return cell
     }
+    
     
     
     func reloadData() {
