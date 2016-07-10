@@ -8,7 +8,7 @@ single UIBezierPath, and then strokes the path.
 SineWaves are stored in a singlton: SineStore. A tableview with a custom cell displays an interface for each sine wave. 
 WaveManager acts Data Source for this tableview. 
 
-![Screen Shot](ScreenShot.png)
+![Screen Shot](Screenshot.png)
 
 
 ## Notes
