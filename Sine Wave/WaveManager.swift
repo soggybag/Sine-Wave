@@ -42,6 +42,7 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
         cell.stepSlider.value = Float(sine.frequency)
         cell.delegate = self
         cell.indexPath = indexPath
+        cell.colorView.backgroundColor = sine.color
         
         return cell
     }

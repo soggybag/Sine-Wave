@@ -35,6 +35,8 @@ class SineTableViewCell: UITableViewCell {
     @IBOutlet weak var phaseSlider: UISlider!
     @IBOutlet weak var phaseLabel: UILabel!
     
+    @IBOutlet weak var colorView: UIView!
+    
     
     // MARK: IBActions
     

@@ -21,7 +21,7 @@ class SineWave: UIView {
     
     func setup() {
         layer.addSublayer(pathLayer)
-        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: "onTimer:", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(0.05, target: self, selector: #selector(SineWave.onTimer(_:)), userInfo: nil, repeats: true)
     }
     
     
@@ -60,6 +60,9 @@ class SineWave: UIView {
     func update() {
         // Draw a sine curve with a fill
         
+        // -------------------------------------------------------------------
+        // Draw seprate sine waves
+    
         let centerY = frame.height / 2  // find the vertical center
         let steps = 200                 // Divide the curve into steps
         let stepX = frame.width / CGFloat(steps) // find the horizontal step distance
@@ -76,6 +79,7 @@ class SineWave: UIView {
             let y = (sin((Double(i) * 0.08)+t) * Double(range)) + Double(centerY)
             path.addLineToPoint(CGPoint(x: x, y: CGFloat(y)))
         }
+        
         // Draw down to the lower right
         path.addLineToPoint(CGPoint(x: frame.width, y: frame.height))
         // Close the path

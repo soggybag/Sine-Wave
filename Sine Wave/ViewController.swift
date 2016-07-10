@@ -24,10 +24,17 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     
     
+    func randomColor() -> UIColor {
+        let hue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+    }
+    
+    
+    
     // MARK: IBActions
     
     @IBAction func addSineButtonTapped(sender: UIButton) {
-        SineStore.sharedInstance.add(1, amplitude: 20, color: UIColor.blueColor())
+        SineStore.sharedInstance.add(1, amplitude: 20, color: randomColor())
         waveManager.reloadData()
     }
     
@@ -39,6 +46,12 @@ class ViewController: UIViewController, UITableViewDelegate {
             sineWaveView.pause()
         }
     }
+    
+    
+    @IBAction func addativeSwitchChanged(sender: UISwitch) {
+        sineWaveView.displayAsSum = sender.on
+    }
+    
     
     
     
