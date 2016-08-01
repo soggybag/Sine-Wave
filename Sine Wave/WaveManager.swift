@@ -9,19 +9,39 @@
 import Foundation
 import UIKit
 
+/** This class acts as data source and delegate for the sine wave table view.  */
+
 class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
     
+    /** A UITableView Instance */
     var tableView: UITableView!
     
     
-    // MARK: Sine TableView Cell Delegate
+    // MARK: - Init
     
-    func removeSineAtIndexPath(indexPath: NSIndexPath) {
-        SineStore.sharedInstance.removeAtIndex(indexPath.row)
-        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+    init(tableView: UITableView) {
+        self.tableView = tableView
     }
     
-    // MARK: TableView DataSource
+    
+    
+    // MARK: - Utility Methods
+    
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    /// SineTableViewCellDelegate method removes a Sine when the cell is removed.
+    
+    func removeSine(sine: Sine, cell: UITableViewCell) {
+        if let indexPath = tableView.indexPathForCell(cell) {
+            SineStore.sharedInstance.removeSine(sine)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Left)
+        }
+    }
+    
+    
+    // MARK: - TableView DataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return SineStore.sharedInstance.count
@@ -36,27 +56,17 @@ class WaveManager: NSObject, UITableViewDataSource, SineTableViewCellDelegate {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("cell") as! SineTableViewCell
         
+        cell.delegate = self
+        
         let sine = SineStore.sharedInstance.array[indexPath.row]
+        
         cell.sine = sine
         cell.rangeSlider.value = Float(sine.amplitude)
         cell.stepSlider.value = Float(sine.frequency)
-        cell.delegate = self
-        cell.indexPath = indexPath
         cell.colorView.backgroundColor = sine.color
         
         return cell
     }
     
-    
-    
-    func reloadData() {
-        tableView.reloadData()
-    }
-    
-    
-    init(tableView: UITableView) {
-        self.tableView = tableView
-        
-    }
     
 }

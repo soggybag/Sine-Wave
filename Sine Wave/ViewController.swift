@@ -7,7 +7,7 @@
 //
 
 
-// This project shows some sine waves
+// This project draws sine waves.
 
 import UIKit
 
@@ -15,23 +15,14 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     var waveManager: WaveManager!
     
-    // MARK: IBOutlets
+    // MARK: - IBOutlets
 
     @IBOutlet weak var sineWaveView: SineWaveView!
     @IBOutlet weak var tableView: UITableView!
     
     
     
-    
-    
-    func randomColor() -> UIColor {
-        let hue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
-    }
-    
-    
-    
-    // MARK: IBActions
+    // MARK: - IBActions
     
     @IBAction func addSineButtonTapped(sender: UIButton) {
         SineStore.sharedInstance.add(1, amplitude: 20, color: randomColor())
@@ -54,12 +45,18 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     
     
+    // MARK: - Utility Methods
     
-    // MARK: TableView Delegate 
+    func randomColor() -> UIColor {
+        let hue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+    }
     
     
     
     
+    
+    // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         waveManager = WaveManager(tableView: tableView)

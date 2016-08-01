@@ -6,13 +6,24 @@
 //  Copyright © 2016 mitchell hudson. All rights reserved.
 //
 
+// Custom tableview cell displays sine properties and controls
+
 import UIKit
 
+
+///
+
 protocol SineTableViewCellDelegate {
-    func removeSineAtIndexPath(indexPath: NSIndexPath)
+    func removeSine(sine: Sine, cell: UITableViewCell)
 }
 
+
+
+
+
 class SineTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
     
     var delegate: SineTableViewCellDelegate?
     var stepFormatter = NSNumberFormatter()
@@ -22,10 +33,8 @@ class SineTableViewCell: UITableViewCell {
             updateLabels()
         }
     }
-    var indexPath: NSIndexPath?
     
-    
-    // MARK: IBOutlets 
+    // MARK: - IBOutlets
     
     @IBOutlet weak var rangeSlider: UISlider!
     @IBOutlet weak var stepSlider: UISlider!
@@ -38,7 +47,7 @@ class SineTableViewCell: UITableViewCell {
     @IBOutlet weak var colorView: UIView!
     
     
-    // MARK: IBActions
+    // MARK: - IBActions
     
     @IBAction func rangeSliderChanged(sender: UISlider) {
         if let sine = sine {
@@ -52,7 +61,6 @@ class SineTableViewCell: UITableViewCell {
             sine.frequency = Double(sender.value)
             updateLabels()
         }
-        
     }
     
     
@@ -66,16 +74,16 @@ class SineTableViewCell: UITableViewCell {
     
     
     @IBAction func removeButtonTapped(sender: UIButton) {
-        guard let delegate = delegate, let indexPath = indexPath else {
-            print("????")
+        guard let delegate = delegate, let sine = sine else {
             return
         }
         
-        print("removing sine")
-        delegate.removeSineAtIndexPath(indexPath)
+        delegate.removeSine(sine, cell: self)
     }
     
     
+    
+    // MARK: - Utility methods
     
     func updateLabels() {
         if sine != nil {
@@ -92,7 +100,8 @@ class SineTableViewCell: UITableViewCell {
     
     
     
-
+    // MARK: - View Lifecycle
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

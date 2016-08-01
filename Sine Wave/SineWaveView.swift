@@ -6,9 +6,13 @@
 //  Copyright © 2016 mitchell hudson. All rights reserved.
 //
 
+// This class draws sine waves into a UIView
+
 import UIKit
 
 class SineWaveView: UIView {
+    
+    // MARK: - Properties
     
     var centerY: Double = 0
     var stepX: Double = 0
@@ -20,6 +24,28 @@ class SineWaveView: UIView {
     
     var displayAsSum = true
     
+    
+    
+    
+    // MARK: - Init
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        setup()
+    }
+    
+    
+    
+    
+    // MARK: - Setup
+    
     func setup() {
         layer.addSublayer(shapeLayer)
         timer = NSTimer.scheduledTimerWithTimeInterval(0.04, target: self, selector: #selector(SineWaveView.onTimer(_:)), userInfo: nil, repeats: true)
@@ -29,39 +55,26 @@ class SineWaveView: UIView {
     }
     
     
+    
+    // MARK: - Utilities
+    
     func pause() {
         isRunning = false
     }
     
-    
     func run() {
         isRunning = true
-    }
-    
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setup()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        setup()
     }
     
     func onTimer(timer: NSTimer) {
         drawSineWaves()
     }
     
-    
     func drawSineWaves() {
         
-        // -------------------------------------------------------------------------------
+        // ------------------------------------------------------------------
         // Sum Sine waves
         
-            
         let sumPath = UIBezierPath()
         var sinSum = Array<CGFloat>(count: steps, repeatedValue: 0)
         
